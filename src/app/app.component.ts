@@ -32,12 +32,6 @@ export class AppComponent implements OnInit {
     this.chance = this.diceService.calculateChanceWithEmulation(this.config);
   }
 
-  public addNewValue(event: Event) {
-    const target = event.target as HTMLInputElement;
-    this.config.knownValues.push(Number.parseInt(target.value));
-    target.value = 'qwerty';
-  }
-
   public parseKnownValues(event: Event) {
     const target = event.target as HTMLInputElement;
     const value = target.value;
@@ -46,11 +40,5 @@ export class AppComponent implements OnInit {
       .split(' ')
       .map((value) => Number.parseInt(value))
       .filter((value) => value);
-  }
-
-  public removeIndex(index: number) {
-    this.config.knownValues = this.config.knownValues.filter(
-      (v, i) => i !== index
-    );
   }
 }
