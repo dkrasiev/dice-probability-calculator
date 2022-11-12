@@ -13,11 +13,11 @@ export class AppComponent implements OnInit {
 
   public config: Config = {
     bet: {
-      count: 4,
-      value: 6,
+      count: 1,
+      value: 1,
     },
     count: 16,
-    knownValues: [3, 3, 5],
+    knownValues: [],
     multicube: 1,
     faces: 6,
   };
