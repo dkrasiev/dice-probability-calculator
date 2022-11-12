@@ -33,7 +33,7 @@
         <input matInput (change)="parseKnownValues($event)" />
       </mat-form-field>
 
-      <div>Current values: {{ config.knownValues.join(", ") }}</div>
+      <div *ngIf="config.knownValues.length > 0">Current values: {{ config.knownValues.join(', ') }}</div>
     </div>
 
     <div>
