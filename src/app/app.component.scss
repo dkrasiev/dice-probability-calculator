@@ -13,3 +13,15 @@
     margin-bottom: 16px;
   }
 }
+
+.row {
+  display: flex;
+
+  & > * {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
