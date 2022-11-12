@@ -1,9 +1,10 @@
 <div class="container list">
-  <h1>Result</h1>
-
-  <h2 [ngStyle]="{ color: chance > 0.5 ? 'green' : 'red' }">
-    {{ chance | percent: ".0-2" }}
-  </h2>
+  <h1>
+    Result:
+    <span [ngStyle]="{ color: chance > 0.5 ? 'green' : 'red' }">
+      {{ chance | percent: ".0-2" }}
+    </span>
+  </h1>
 
   <button (click)="calculcateChance()" mat-raised-button color="primary">
     Calculate
@@ -33,7 +34,9 @@
         <input matInput (change)="parseKnownValues($event)" />
       </mat-form-field>
 
-      <div *ngIf="config.knownValues.length > 0">Current values: {{ config.knownValues.join(', ') }}</div>
+      <div *ngIf="config.knownValues.length > 0">
+        Current values: {{ config.knownValues.join(", ") }}
+      </div>
     </div>
 
     <div>
