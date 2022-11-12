@@ -1,0 +1,14 @@
+.container {
+  width: 98vw;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+
+  & > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}

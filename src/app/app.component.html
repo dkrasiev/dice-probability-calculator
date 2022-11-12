@@ -1,0 +1,51 @@
+<div class="container list">
+  <h1>Result</h1>
+
+  <h2>{{ chance | percent: ".0-2" }}</h2>
+
+  <button (click)="calculcateChance()" mat-raised-button color="primary">
+    Calculate
+  </button>
+
+  <div class="config list">
+    <mat-form-field>
+      <mat-label>Multicube</mat-label>
+      <input matInput type="number" [(ngModel)]="config.multicube" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Count</mat-label>
+      <input matInput type="number" [(ngModel)]="config.count" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Faces</mat-label>
+      <input matInput type="number" [(ngModel)]="config.faces" />
+    </mat-form-field>
+
+    <div>
+      <h2>My values</h2>
+
+      <mat-form-field>
+        <mat-label>Values</mat-label>
+        <input matInput (change)="parseKnownValues($event)" />
+      </mat-form-field>
+
+      <div>Current values: {{ config.knownValues.join(', ') }}</div>
+    </div>
+
+    <div>
+      <h2>Bet</h2>
+
+      <mat-form-field>
+        <mat-label>Count</mat-label>
+        <input matInput type="number" [(ngModel)]="config.bet.count" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Value</mat-label>
+        <input matInput type="number" [(ngModel)]="config.bet.value" />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
