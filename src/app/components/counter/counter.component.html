@@ -1,0 +1,19 @@
+<div style="display: flex; align-items: baseline">
+  <mat-form-field style="flex: 1">
+    <mat-label>{{ label }}</mat-label>
+    <input
+      type="number"
+      matInput
+      [value]="value"
+      (change)="onInputChange($event)"
+    />
+  </mat-form-field>
+
+  <button (click)="decrement()" mat-icon-button>
+    <mat-icon>remove</mat-icon>
+  </button>
+
+  <button (click)="increment()" mat-icon-button>
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

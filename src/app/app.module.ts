@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { CounterComponent } from './components/counter/counter.component';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, MaterialModule, FormsModule],
+  declarations: [AppComponent, CounterComponent],
+  imports: [BrowserModule, BrowserAnimationsModule, MaterialModule],
   providers: [],
   bootstrap: [AppComponent],
 })
